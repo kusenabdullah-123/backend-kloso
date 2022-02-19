@@ -59,20 +59,14 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "fullname": {
-      "type": "string"
+    "users_id": {
+      "via": "user_id",
+      "model": "anggota"
     },
-    "jurusan": {
-      "type": "string"
-    },
-    "jenisKelamin": {
-      "type": "string"
-    },
-    "alasan": {
-      "type": "text"
-    },
-    "angkatan": {
-      "type": "string"
+    "nim": {
+      "type": "string",
+      "unique": false,
+      "required": true
     }
   }
 }

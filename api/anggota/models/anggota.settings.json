@@ -13,19 +13,35 @@
   "pluginOptions": {},
   "attributes": {
     "nama": {
-      "type": "string"
+      "type": "string",
+      "default": "-"
     },
     "angkatan": {
-      "type": "string"
+      "type": "string",
+      "default": "-"
+    },
+    "user_id": {
+      "via": "users_id",
+      "plugin": "users-permissions",
+      "model": "user"
     },
     "jurusan": {
-      "type": "string"
+      "type": "string",
+      "default": "-"
     },
     "jenisKelamin": {
-      "type": "string"
+      "type": "string",
+      "default": "-"
     },
-    "alasan": {
-      "type": "text"
+    "foto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
